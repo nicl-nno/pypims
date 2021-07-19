@@ -1,6 +1,6 @@
 import os
 
-from pypims import flood
+
 from pypims import IO
 from pypims.IO.demo_functions import get_sample_data
 import pandas as pd
@@ -77,5 +77,3 @@ case_input.set_runtime([0, 7200, 900, 1800])
 
 print(case_input)
 case_input.write_input_files()  # create all input files
-
-flood.run(case_folder)
