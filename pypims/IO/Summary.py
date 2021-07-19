@@ -190,10 +190,10 @@ class Summary:
         """
         for key, value in kw.items():
             if key=='gauges_pos':
-                value_arr = np.array(value)
-                num_gauges=value_arr.shape[0]
+                #value_arr = np.array(value)
+                num_gauges=np.array(value).shape[0]
                 self.model_attr['num_gauges'] = num_gauges
-                self.model_attr['gauges_pos'] = value
+                self.model_attr['gauges_pos'] = value.tolist()
             else:
                 if type(value) is np.ndarray:
                     value = value.tolist()            
