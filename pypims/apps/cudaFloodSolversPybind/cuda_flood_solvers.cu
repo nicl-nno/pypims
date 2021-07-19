@@ -327,10 +327,11 @@ int run(const char* work_dir){
       break;
     } */
 
-    if (time_controller.current() + time_controller.dt() > t_out){
+    //-----------Causes stuck after after reaching the output interval------------
+/*    if (time_controller.current() + time_controller.dt() > t_out){
       Scalar dt = t_out - time_controller.current();
       time_controller.set_dt(dt);
-    }
+    } */
 
     if (cnt % 100 == 0){
       h_writer.write(time_controller.current());
